@@ -6,33 +6,33 @@ a.skip{
   transition: left 1s ease-out;
   z-index: 1;
   /* Requirement 1 code here -- Do not remove this comment. */
-  margin-left: -400px;
-  margin-top: -200px;
-  
+
+  left: -400px;
+  top: -200px;
 }
 
 
   /* Requirement 2 code here -- Do not remove this comment. */
-a:focus{
+nav a:focus{
   border-width: 10px;
   border-style: solid;
   border-color: yellow;
 }
 
   /* Requirement 3 code here -- Do not remove this comment. */
-@media screen and (max-width: 750px){
+
   .container{ 
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     row-gap: 30px;
-  }
+}
 
 
   /* Requirement 4 code here -- Do not remove this comment. */
-    .intro{ 
+  div.intro{ 
       /* The image used */
-      background-color: #858585;
       background-image: url("../images/header.jpg");
+      background-color: #858585;
 
       /* Set a specific height */
       min-height: 400px;
@@ -66,23 +66,19 @@ a:focus{
   /* Requirement 8 code here -- Do not remove this comment. */
 
   .about, .about-image{
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row:1/2;
   }
 
   .clients, .clients-image{
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-row:2/3;
   }
 
   .method, .method-image{
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row:3/4;
   }
 
   .contact, .contact-image{
-    grid-row-start: 6;
-    grid-row-end: 7;
+    grid-row:4/5;
   }
 
   /* Requirement 9 code here -- Do not remove this comment. */
@@ -92,7 +88,7 @@ a:focus{
     overflow: scroll;
   }
 
-}
+
 
   /*Add the media query here.  Make sure to */
 
@@ -112,17 +108,22 @@ a:focus{
 
   
   /* Requirement 11 code here -- Do not remove this comment. */
-.skip:focus{
-  margin-bottom: -20px;
-  text-align: left;
 
+a.skip:focus{
+  border-width: 10px;
+  border-style: solid;
+  border-color: yellow;
+  top: 20px;
+  justify-items: left;
 }
 
 
   /* Requirement 12 code here -- Do not remove this comment. */
 .container{
-  grid-template-columns: 50px, auto, 500px, auto, 50px;
-  grid-template-rows: 300px, 300px, 300px, 300px;
+  display: grid;
+  grid-template-columns: 50px auto 500px auto 50px;
+  grid-template-rows: 300px 300px 300px 300px;
+  row-gap: 30px;
 }  
 
 
@@ -138,7 +139,7 @@ a:focus{
 
   /* Requirement 15 code here -- Do not remove this comment. */
   img{
-    object-fit: contain;
+    height: 300px;
   }
 }
 
